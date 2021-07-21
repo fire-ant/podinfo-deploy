@@ -1,0 +1,12 @@
+---
+apiVersion: wego.weave.works/v1alpha1
+kind: Application
+metadata:
+  labels:
+    weave-gitops.weave.works/app-identifier: wego-20ae51c1b7e359727d6696a0e6a3a576
+  name: podinfo-deploy
+  namespace: wego-system
+spec:
+  deployment_type: kustomize
+  path: ./
+  url: ssh://git@github.com/fire-ant/podinfo-deploy.git
